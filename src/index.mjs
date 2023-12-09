@@ -47,7 +47,7 @@ export const handler = async (event) => {
 		});
 
 		const res = {
-			url
+			url: preSignedUrl
 		};
 
 		return done(200, res);
