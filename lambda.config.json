@@ -1,0 +1,9 @@
+{
+    "FunctionName": "lambda-github-actions",
+    "Description": "Lambda CI with github actions",
+    "Role":"GithubActionsRole",
+    "Handler":"index.handler",
+    "Runtime":"nodejs20.x",
+    "Timeout": 10,
+    "MemorySize": 256
+}
