@@ -1,39 +1,59 @@
-import { STSClient, GetCallerIdentityCommand } from "@aws-sdk/client-sts";
+import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
+import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 
 export const handler = async (event) => {
+
+	console.info(JSON.stringify(event));
 
 	const done = (statusCode, body) => {
 		return {
 			statusCode,
+			headers: {
+				"Access-Control-Allow-Headers": "*",
+				"Access-Control-Allow-Origin": "*",
+				"Access-Control-Allow-Methods": "OPTIONS,POST,GET,PUT",
+				"Access-Control-Allow-Credentials": true
+			},
 			body: JSON.stringify(body) // body must be string
 		};
 	}
 
-	try {
-		// AWS SDK v3 example
-		const stsClient = new STSClient({ region: 'us-east-1' });
-		const stsCommand = new GetCallerIdentityCommand({});
-		const stsResponse = await stsClient.send(stsCommand);
-		console.log("🚀 ~ file: index.mjs:9 ~ handler ~ stsResponse:", stsResponse)
-
-		// NodeJS 20 native support for fetch API - POKEAPI example
-		const pokeResponse = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
-		const ditto = await pokeResponse.json();
-		console.log("🚀 ~ file: index.mjs:14 ~ handler ~ ditto:", ditto)
-
-		// Return all examples in response
-		const res = {
-			message: 'AWS Lambda CI/CD with Github Actions',
-			event,
-			awsSdk: stsResponse,
-			pokeApi: ditto
-		}
-
-		return done(200, res)
-
-	} catch (error) {
-		console.error("🚀 ~ file: index.mjs:27 ~ handler ~ error", error)
-		return done(500, error)
+	// Enable CORS if you need to request directly from the browser
+	// this is necessary if the integration in apigateway is a lambda proxy
+	if (event.httpMethod === "OPTIONS") {
+		return done(200, {});
 	}
 
+	try {
+		const body = JSON.parse(event.body);
+		const path = body.path;
+		const file = body.file;
+		const region = body.region || "us-east-1";
+
+		const client = new S3Client({ region });
+		const Bucket = body.bucket;
+		const Key = `${path}/${file}`;
+		const ContentType = body.contentType || "application/octet-stream";
+
+		const command = new PutObjectCommand({
+			ACL: "bucket-owner-full-control",
+			Bucket,
+			Key,
+			ContentType
+		});
+
+		const preSignedUrl = await getSignedUrl(client, command, {
+			expiresIn: 3600 //Seconds before the presigned post expires. 3600 by default.
+		});
+
+		const res = {
+			url
+		};
+
+		return done(200, res);
+
+	} catch (error) {
+		console.error("🚀 ~ file: index.mjs:42 ~ handler ~ error", error)
+		return done(500, error);
+	}
 };

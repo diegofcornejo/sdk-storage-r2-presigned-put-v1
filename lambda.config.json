@@ -1,7 +1,7 @@
 {
-    "FunctionName": "lambda-github-actions",
-    "Description": "Lambda CI with github actions",
-    "Role":"GithubActionsRole",
+    "FunctionName": "sdk-storage-s3-presigned-put-v1",
+    "Description": "SDK - Storage - S3 Presigned PUT",
+    "Role":"LambdaFullAccessRole",
     "Handler":"index.handler",
     "Runtime":"nodejs20.x",
     "Timeout": 10,

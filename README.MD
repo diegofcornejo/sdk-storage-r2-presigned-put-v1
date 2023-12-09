@@ -24,8 +24,8 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-![License](https://img.shields.io/github/license/diegofcornejo/lambda-github-actions?style=for-the-badge)
-![Build](https://img.shields.io/github/actions/workflow/status/diegofcornejo/lambda-github-actions/main.yml?branch=master&style=for-the-badge)
+![License](https://img.shields.io/github/license/diegofcornejo/sdk-storage-s3-presigned-put-v1?style=for-the-badge)
+![Build](https://img.shields.io/github/actions/workflow/status/diegofcornejo/sdk-storage-s3-presigned-put-v1/main.yml?branch=master&style=for-the-badge)
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- ![Alt](https://repobeats.axiom.co/api/embed/cba41cff11950e90521f7f67990dba6cb3743f6b.svg "Repobeats analytics image") -->
@@ -33,7 +33,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/diegofcornejo/lambda-github-actions">
+  <a href="https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1">
     <img src="https://miro.medium.com/max/2000/1*bxhEFjJ4J2CI5sfFsuP7fg.jpeg" alt="Logo" width="auto" height="80">
   </a>
 
@@ -42,14 +42,14 @@
   <p align="center">
     Deploy AWS lambda functions using CI/CD github actions
     <br />
-    <a href="https://github.com/diegofcornejo/lambda-github-actions"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/diegofcornejo/lambda-github-actions">View Demo</a>
+    <a href="https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1">View Demo</a>
     ·
-    <a href="https://github.com/diegofcornejo/lambda-github-actions/issues">Report Bug</a>
+    <a href="https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1/issues">Report Bug</a>
     ·
-    <a href="https://github.com/diegofcornejo/lambda-github-actions/issues">Request Feature</a>
+    <a href="https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1/issues">Request Feature</a>
   </p>
 </p>
 
@@ -79,7 +79,7 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Clone the repository or you can use the [template](https://github.com/new?template_name=lambda-github-actions&template_owner=diegofcornejo)
+Clone the repository or you can use the [template](https://github.com/new?template_name=sdk-storage-s3-presigned-put-v1&template_owner=diegofcornejo)
 
 ### Prerequisites
 
@@ -105,7 +105,7 @@ iam:PassRole
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/diegofcornejo/lambda-github-actions.git
+   git clone https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1.git
    ```
 2. Install NPM packages
    ```sh
@@ -119,7 +119,7 @@ iam:PassRole
 Modify the `lambda.config.json` file with your lambda function configuration
 ```json
 {
-    "FunctionName": "lambda-github-actions",
+    "FunctionName": "sdk-storage-s3-presigned-put-v1",
     "Description": "Lambda CI with github actions",
     "Role":"GithubActionsRole",
     "Handler":"index.handler",
@@ -198,7 +198,7 @@ AWS_PROFILE=dev npm run deploy
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/diegofcornejo/lambda-github-actions/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1/issues) for a list of proposed features (and known issues).
 
 
 <!-- CONTRIBUTING -->
@@ -226,7 +226,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Diego Cornejo - [@diegofcornejo](https://twitter.com/diegofcornejo) - diegof.cornejo@gmail.com
 
-Project Link: [https://github.com/diegofcornejo/lambda-github-actions](https://github.com/diegofcornejo/lambda-github-actions)
+Project Link: [https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1](https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1)
 
 
 
@@ -258,16 +258,16 @@ Project Link: [https://github.com/diegofcornejo/lambda-github-actions](https://g
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/diegofcornejo/lambda-github-actions.svg?style=for-the-badge
-[contributors-url]: https://github.com/diegofcornejo/lambda-github-actions/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/diegofcornejo/lambda-github-actions.svg?style=for-the-badge
-[forks-url]: https://github.com/diegofcornejo/lambda-github-actions/network/members
-[stars-shield]: https://img.shields.io/github/stars/diegofcornejo/lambda-github-actions.svg?style=for-the-badge
-[stars-url]: https://github.com/diegofcornejo/lambda-github-actions/stargazers
-[issues-shield]: https://img.shields.io/github/issues/diegofcornejo/lambda-github-actions.svg?style=for-the-badge
-[issues-url]: https://github.com/diegofcornejo/lambda-github-actions/issues
-[license-shield]: https://img.shields.io/github/license/diegofcornejo/lambda-github-actions.svg?style=for-the-badge
-[license-url]: https://github.com/diegofcornejo/lambda-github-actions/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/diegofcornejo/sdk-storage-s3-presigned-put-v1.svg?style=for-the-badge
+[contributors-url]: https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/diegofcornejo/sdk-storage-s3-presigned-put-v1.svg?style=for-the-badge
+[forks-url]: https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1/network/members
+[stars-shield]: https://img.shields.io/github/stars/diegofcornejo/sdk-storage-s3-presigned-put-v1.svg?style=for-the-badge
+[stars-url]: https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1/stargazers
+[issues-shield]: https://img.shields.io/github/issues/diegofcornejo/sdk-storage-s3-presigned-put-v1.svg?style=for-the-badge
+[issues-url]: https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1/issues
+[license-shield]: https://img.shields.io/github/license/diegofcornejo/sdk-storage-s3-presigned-put-v1.svg?style=for-the-badge
+[license-url]: https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]:https://www.linkedin.com/in/diego-cornejo-devops-sre/
 <!-- [product-screenshot]: images/screenshot.png -->
