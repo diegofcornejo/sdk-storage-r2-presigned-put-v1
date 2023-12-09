@@ -32,7 +32,6 @@ export const handler = async (event) => {
 		const body = JSON.parse(event.body);
 		const path = body.path;
 		const file = body.file;
-		const region = body.region || "us-east-1";
 
 		// const client = new S3Client({ region });
 		const client = new S3Client({
