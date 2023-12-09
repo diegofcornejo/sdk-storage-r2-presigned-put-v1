@@ -1,6 +1,6 @@
 {
-    "FunctionName": "sdk-storage-s3-presigned-put-v1",
-    "Description": "SDK - Storage - S3 Presigned PUT",
+    "FunctionName": "sdk-storage-r2-presigned-put-v1",
+    "Description": "SDK - Storage - R2 Presigned PUT",
     "Role":"LambdaFullAccessRole",
     "Handler":"index.handler",
     "Runtime":"nodejs20.x",

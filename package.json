@@ -1,5 +1,5 @@
 {
-  "name": "sdk-storage-s3-presigned-put-v1",
+  "name": "sdk-storage-r2-presigned-put-v1",
   "version": "1.0.0",
   "description": "Lambda CI with github actions",
   "main": "./src/index.mjs",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1.git"
+    "url": "git+https://github.com/diegofcornejo/sdk-storage-r2-presigned-put-v1.git"
   },
   "keywords": [
     "lambda",
@@ -30,7 +30,7 @@
   "author": "Diego Cornejo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1/issues"
+    "url": "https://github.com/diegofcornejo/sdk-storage-r2-presigned-put-v1/issues"
   },
-  "homepage": "https://github.com/diegofcornejo/sdk-storage-s3-presigned-put-v1#readme"
+  "homepage": "https://github.com/diegofcornejo/sdk-storage-r2-presigned-put-v1#readme"
 }

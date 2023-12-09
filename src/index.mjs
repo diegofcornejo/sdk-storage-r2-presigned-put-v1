@@ -3,6 +3,10 @@ import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 
 export const handler = async (event) => {
 
+	const ACCOUNT_ID = process.env.R2_ACCOUNT_ID;
+	const ACCESS_KEY_ID = process.env.ACCESS_KEY_ID;
+	const SECRET_ACCESS_KEY =  process.env.SECRET_ACCESS_KEY;
+
 	console.info(JSON.stringify(event));
 
 	const done = (statusCode, body) => {
@@ -30,7 +34,16 @@ export const handler = async (event) => {
 		const file = body.file;
 		const region = body.region || "us-east-1";
 
-		const client = new S3Client({ region });
+		// const client = new S3Client({ region });
+		const client = new S3Client({
+			region: "auto",
+			endpoint: `https://${ACCOUNT_ID}.r2.cloudflarestorage.com`,
+			credentials: {
+			  accessKeyId: ACCESS_KEY_ID,
+			  secretAccessKey: SECRET_ACCESS_KEY,
+			},
+		  });
+
 		const Bucket = body.bucket;
 		const Key = `${path}/${file}`;
 		const ContentType = body.contentType || "application/octet-stream";
